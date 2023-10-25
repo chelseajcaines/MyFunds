@@ -1,0 +1,1310 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@300;700&family=Open+Sans:wght@300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: white;
+}
+
+.outside_wrapper {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 80em;
+}
+
+/*------------------ Grid -----------------------------------*/
+
+main {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 0.3fr 1fr;
+    grid-template-rows: 0.2fr 1fr;
+    grid-template-areas:
+        "logo header"
+        "side content";
+    grid-gap: 10px;
+}
+
+/*------------------ Logo Section -----------------------------------*/
+
+.logo_container {
+    grid-area: logo;
+    background-color: #f9fcfc;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: 550;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+.logo {
+    width: 100px;
+    padding-right: 10px;
+    padding-bottom: 16px;
+}
+
+/*------------------ Header Section -----------------------------------*/
+
+.header_text {
+    grid-area: header;
+    border-radius: 4px;
+    padding: 10px 20px;
+    background-color: #c1dddd66;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.header_text h1 {
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.header_text h2 {
+    font-size: 22px;
+    font-weight: 300;
+}
+
+/*------------------ Sidebar Section -----------------------------------*/
+
+.sidebar {
+    grid-area: side;
+    border-radius: 4px;
+    padding-top: 40px;
+    background-color: #c1dddd66;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.sidebar .tabs_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar .tabs_container ul li {
+    list-style: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    color: #696969;
+    padding: 30px 50px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.sidebar .tabs_container ul li:hover {
+    background-color: rgb(193, 221, 221, 0.4);
+}
+
+.sidebar .tabs_container ul li a {
+    font-size: 21px;
+    text-decoration: none;
+    color: #696969;
+}
+
+.sidebar .tabs_container ul li span {
+    padding-right: 25px;
+    font-size: 21px;
+}
+
+/*------------------ Content Section -----------------------------------*/
+
+.tab_content_container {
+    grid-area: content;
+    background-color: #f9fcfc;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.page_load_container {
+    width: 100%;
+}
+
+.page_load_container .page_load_text {
+    color: black;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.page_load_container .page_load_text h3 {
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.page_load_container .page_load_text span {
+    font-weight: 600;
+    color: rgb(158, 2, 158);
+}
+
+.page_load_container .page_load_text p {
+    font-size: 18px;
+    color: #696969;
+}
+
+.page_load_image_container {
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+}
+
+.page_load_image {
+    width: 80%;
+    height: auto;
+    opacity: 0.5;
+}
+
+.tab_content {
+    display: none;
+}
+
+.tab_content.active {
+    display: block;
+}
+
+.tab_content_container .tab_content section {
+    padding-top: 5px;
+}
+
+.tab_content_container .tab_content header h4 {
+    font-size: 50px;
+    font-weight: 200;
+    padding-bottom: 5px;
+}
+
+.tab_content p {
+    padding-bottom: 20px;
+    padding-top: 5px;
+    font-size: 17px;
+}
+
+.tab_content .single_example_line {
+    display: none;
+}
+
+.button_with_examples,
+.expense_button_with_examples_one {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button_with_examples .container {
+    width: 180px;
+}
+
+.tab_content .add_input_button {
+    height: 100%;
+    width: 180px;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 2px;
+    transition: all 0.3s ease;
+    font-size: 60px;
+    font-weight: 200;
+}
+
+.expense_button_with_examples_two {
+    display: none;
+}
+
+.budgetExample550,
+.incomeExample550,
+.goalsExample550 {
+    display: none;
+}
+
+.tab_content img {
+    width: 100%;
+    opacity: 0.5;
+}
+
+.data_area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 65px;
+    width: 100%;
+}
+
+.tab_content .budget {
+    border-color: rgb(255, 185, 104, 0.6);
+    background: rgb(255, 185, 104, 0.2);
+    color: rgb(255, 185, 104);
+}
+
+.budget:hover {
+    cursor: pointer;
+    background-color: rgb(255, 185, 104);
+    border-color: rgba(255, 235, 212);
+    color: rgba(255, 235, 212);
+}
+
+.tab_content .income {
+    border-color: rgb(137, 192, 197, 0.6);
+    background: rgb(137, 192, 197, 0.2);
+    color: rgb(137, 192, 197);
+}
+
+.income:hover {
+    cursor: pointer;
+    background-color: rgb(137, 192, 197);
+    border-color: rgb(207, 244, 248);
+    color: rgb(209, 243, 247);
+}
+
+.tab_content .expense {
+    border-color: rgb(174, 149, 190, 0.6);
+    background: rgb(174, 149, 190, 0.2);
+    color: rgb(174, 149, 190);
+    width: 180px;
+}
+
+.expense:hover {
+    cursor: pointer;
+    background-color: rgb(174, 149, 190);
+    border-color: rgb(234, 222, 241);
+    color: rgb(229, 209, 241);
+}
+
+.tab_content .goals {
+    border-color: rgba(71, 168, 150, 0.6);
+    background: rgba(71, 168, 150, 0.2);
+    color: rgba(71, 168, 150);
+}
+
+.goals:hover {
+    cursor: pointer;
+    background-color: rgba(71, 168, 150);
+    border-color: rgb(176, 236, 225);
+    color: rgb(175, 243, 231);
+}
+
+.tab_content_container .tab_content section .heading {
+    max-width: 100%;
+    height: 40px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+    margin-top: 50px;
+}
+
+.tab_content_container .tab_content section .heading div {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+}
+
+/*------------------ Forms -----------------------------------*/
+
+.form_popup {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    z-index: 1;
+    position: absolute;
+}
+
+.error {
+    display: none;
+    color: red;
+}
+
+.form_popup .wrapper {
+    margin: 0;
+    padding: 18px 30px;
+    max-width: 480px;
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.125);
+    z-index: 2;
+}
+
+.form_popup .close_button {
+    width: 100%;
+    height: 25px;
+    display: flex;
+    justify-content: right;
+}
+
+.form_popup .wrapper i {
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.form_popup .wrapper header {
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: rgb(197, 80, 197);
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.form_popup .wrapper fieldset {
+    border: none;
+    width: 100%;
+}
+
+.form_popup .wrapper fieldset .input_field,
+.form_popup .wrapper fieldset .submit_button {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form_popup .wrapper fieldset .input_field label {
+    width: 200px;
+    color: #757575;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.form_popup .wrapper fieldset .input_field input {
+    width: 100%;
+    outline: none;
+    border: 1px solid #d5dbd9;
+    font-size: 15px;
+    padding: 8px 10px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.form_popup .wrapper fieldset .input_field input:focus {
+    border: 1px solid purple;
+}
+
+.form_popup .wrapper fieldset .input_field input:hover {
+    border: 1px solid purple;
+}
+
+.form_popup .wrapper fieldset .input_field .choose:hover {
+    border: 1px solid purple;
+}
+
+.form_popup .wrapper fieldset button {
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 15px;
+    border: 0;
+    background-color: rgb(193, 221, 221, 0.4);
+    cursor: pointer;
+    border-radius: 3px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form_popup .wrapper fieldset button:hover {
+    background-color: rgb(193, 221, 221, 0.6);
+}
+
+.form_popup .wrapper fieldset .choose {
+    border: 1px solid #d5dbd9;
+    width: 100%;
+    height: 100%;
+    padding: 8px 10px;
+    border-radius: 3px;
+    outline: none;
+    transition: all 0.3s ease;
+    color: #757575;
+}
+
+/*------------------ Cards -----------------------------------*/
+
+.card {
+    width: 180px;
+    height: 180px;
+    border: 1px solid rgb(193, 221, 221, 0.6);
+    padding: 3px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.card .top {
+    text-align: center;
+    font-size: 24px;
+    background-color: rgb(193, 221, 221, 0.6);
+    padding: 9px 0;
+    margin: 4px;
+    font-weight: 300;
+    border-radius: 4px;
+}
+
+.card .type {
+    text-align: center;
+    font-size: 12px;
+    background-color: rgba(241, 113, 74, 0.2);
+    padding: 4px 0;
+    margin: 4px;
+    border-radius: 4px;
+}
+
+.card .middle {
+    display: flex;
+    justify-content: space-between;
+    margin: 6px;
+    padding-top: 7px;
+    padding-bottom: 5px;
+    border-radius: 4px;
+}
+
+.card .modify {
+    display: flex;
+    justify-content: stretch;
+    margin: 1px;
+}
+
+.card .modify button {
+    width: 100%;
+    border: none;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin: 3px;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: rgb(193, 221, 221, 0.2);
+    transition: all 0.3s ease;
+}
+
+.card .modify button:hover {
+    background-color: rgb(193, 221, 221, 0.6);
+}
+
+/*------------------ Expense Cards -----------------------------------*/
+
+.expense_card {
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.expense_card:nth-child(odd) {
+    background-color: rgb(193, 221, 221, 0.2);
+}
+
+.expense_card:nth-child(even) {
+    background-color: rgb(193, 221, 221, 0.4);
+}
+
+.expense_data_area {
+    margin-top: 20px;
+    display: block;
+}
+
+.expense_card .slot {
+    max-width: 200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    height: 100%;
+}
+
+.expense_card .expense_buttons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.expense_card .expense_buttons button {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 16px;
+    background-color: rgb(193, 221, 221, 0.2);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.expense_card button:hover {
+    background-color: rgb(193, 221, 221, 0.6);
+}
+
+/*------------------ Responsiveness -----------------------------------*/
+
+@media (min-width: 2000px) {
+    .outside_wrapper {
+        max-width: 130em;
+    }
+
+    main {
+        grid-gap: 15px;
+    }
+
+    .logo_container {
+        border-radius: 6px;
+        font-size: 45px;
+    }
+
+    .logo {
+        width: 200px;
+        padding-bottom: 25px;
+    }
+
+    .header_text {
+        border-radius: 6px;
+        padding: 10px 30px;
+    }
+
+    .header_text h1 {
+        font-size: 70px;
+    }
+
+    .header_text h2 {
+        font-size: 35px;
+    }
+
+    .sidebar {
+        border-radius: 6px;
+        padding-top: 70px;
+    }
+
+    .sidebar .tabs_container ul li {
+        padding: 50px;
+        border-radius: 6px;
+    }
+
+    .sidebar .tabs_container ul li a,
+    .sidebar .tabs_container ul li span {
+        font-size: 37px;
+    }
+
+    .tab_content_container {
+        border-radius: 6px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .page_load_container .page_load_text {
+        padding-top: 15px;
+        padding-left: 10px;
+    }
+
+    .page_load_container .page_load_text h3 {
+        font-size: 40px;
+    }
+
+    .page_load_container .page_load_text p {
+        font-size: 28px;
+    }
+
+    .page_load_image_container {
+        padding-top: 100px;
+    }
+
+    .tab_content_container .tab_content header h4 {
+        font-size: 80px;
+        padding-bottom: 8px;
+    }
+
+    .tab_content_container .tab_content section {
+        padding-top: 8px;
+    }
+
+    .tab_content p {
+        font-size: 25px;
+    }
+
+    .button_with_examples,
+    .expense_button_with_examples_one,
+    .expense_button_with_examples_one .expense_example_container {
+        height: 300px;
+    }
+
+    .expense_button_with_examples_one
+        .expense_example_container
+        .expense_example {
+        height: 100%;
+        width: auto;
+    }
+
+    .tab_content .add_input_button {
+        width: 300px;
+        border-radius: 6px;
+        border-style: solid;
+        border-width: 3px;
+        font-size: 90px;
+    }
+
+    .button_with_examples .container {
+        width: 300px;
+    }
+
+    .tab_content img {
+        width: 100%;
+    }
+
+    .data_area {
+        gap: 115px;
+    }
+
+    .tab_content_container .tab_content section .heading {
+        height: 80px;
+        border-radius: 6px;
+        margin-top: 50px;
+    }
+
+    .tab_content_container .tab_content section .heading div {
+        font-size: 30px;
+    }
+
+    .error {
+        display: none;
+        color: red;
+        font-size: 23px;
+    }
+
+    .form_popup .wrapper {
+        padding: 37px 55px;
+        max-width: 780px;
+        width: 100%;
+        max-height: 800px;
+        height: 100%;
+        border-radius: 6px;
+    }
+
+    .form_popup .close_button {
+        width: 100%;
+        height: 25px;
+        display: flex;
+        justify-content: right;
+    }
+
+    .form_popup .wrapper i {
+        font-size: 28px;
+    }
+
+    .form_popup .wrapper header {
+        font-size: 40px;
+        margin-bottom: 55px;
+    }
+
+    .form_popup .wrapper fieldset .input_field,
+    .form_popup .wrapper fieldset .submit_button {
+        margin-bottom: 47px;
+    }
+
+    .form_popup .wrapper fieldset .input_field label {
+        width: 350px;
+        font-size: 26px;
+        color: black;
+    }
+
+    .form_popup .wrapper fieldset .input_field input,
+    .form_popup .wrapper fieldset .choose {
+        font-size: 24px;
+        padding: 15px 15px;
+        border-radius: 4px;
+    }
+
+    .form_popup .wrapper fieldset button {
+        padding: 11px 15px;
+        font-size: 30px;
+        border-radius: 4px;
+    }
+
+    .card {
+        width: 300px;
+        height: 300px;
+        padding: 6px;
+    }
+
+    .card .top {
+        font-size: 40px;
+        padding: 13px 0;
+        margin: 6px;
+        border-radius: 6px;
+    }
+
+    .card .type {
+        font-size: 22px;
+        padding: 7px 0;
+        margin: 6px;
+        border-radius: 6px;
+    }
+
+    .card .middle {
+        font-size: 27px;
+        margin: 6px;
+        padding-top: 13px;
+        padding-bottom: 13px;
+    }
+
+    .card .modify button {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-radius: 6px;
+        font-size: 24px;
+    }
+
+    .expense_card {
+        height: 70px;
+        border-radius: 6px;
+    }
+
+    .expense_card .slot {
+        max-width: 309px;
+        font-size: 26px;
+    }
+
+    .expense_card .expense_buttons button {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 1245px) {
+    main {
+        grid-template-columns: 0.2fr 1fr;
+        grid-template-rows: 0.2fr 1fr;
+        grid-template-areas:
+            "logo header"
+            "side content";
+    }
+
+    .logo_container {
+        flex-direction: column;
+        font-size: 25px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    .header_text h1 {
+        font-size: 35px;
+    }
+
+    .header_text h2 {
+        font-size: 18px;
+    }
+
+    .sidebar .tabs_container ul li {
+        padding: 20px 25px;
+    }
+
+    .sidebar .tabs_container ul li a {
+        font-size: 19px;
+    }
+
+    .sidebar .tabs_container ul li span {
+        display: none;
+    }
+
+    .tab_content_container .tab_content header h4 {
+        font-size: 43px;
+    }
+
+    .tab_content .expense_button_with_examples_one {
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .tab_content
+        .expense_button_with_examples_one
+        .expense_example_container
+        .expense_example {
+        height: 150px;
+    }
+}
+
+@media (max-width: 1025px) {
+    .button_with_examples,
+    .expense_button_with_examples_one {
+        height: 150px;
+    }
+
+    .button_with_examples .container {
+        width: 150px;
+    }
+
+    .tab_content .add_input_button {
+        width: 150px;
+        font-size: 50px;
+    }
+
+    .card {
+        width: 150px;
+        height: 150px;
+        padding: 1px;
+    }
+
+    .card .top {
+        font-size: 20px;
+        padding: 7px 0;
+    }
+
+    .card .type {
+        font-size: 10px;
+        padding: 2px 0;
+    }
+
+    .card .middle {
+        padding-top: 5px;
+        padding-bottom: 3px;
+        font-size: 14px;
+    }
+
+    .card .modify button {
+        padding-top: 7px;
+        padding-bottom: 7px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 950px) {
+    .logo_container {
+        font-size: 20px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+
+    .logo {
+        width: 80px;
+        padding-bottom: 5px;
+    }
+
+    .sidebar .tabs_container ul li {
+        padding: 16px 18px;
+    }
+
+    .sidebar .tabs_container ul li a {
+        font-size: 16px;
+    }
+
+    .tab_content
+        .expense_button_with_examples_one
+        .expense_example_container
+        .expense_example {
+        height: 125px;
+    }
+
+    .expense_card {
+        height: 35px;
+    }
+
+    .expense_card .slot,
+    .expense_card .expense_buttons button {
+        font-size: 14px;
+    }
+
+    .tab_content_container .tab_content section .heading {
+        height: 40px;
+    }
+
+    .tab_content_container .tab_content section .heading div {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 830px) {
+    .expense_button_with_examples_one {
+        display: none;
+    }
+
+    .expense_button_with_examples_two {
+        display: block;
+    }
+
+    .tab_content .expense_button_with_examples_two .expense {
+        width: 100%;
+        height: 70px;
+        font-size: 40px;
+    }
+
+    .page_load_container .page_load_text h3 {
+        font-size: 25px;
+    }
+
+    .page_load_container .page_load_text p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 754px) {
+    .tab_content .image_three {
+        display: none;
+    }
+}
+
+@media (max-width: 700px) {
+    main {
+        grid-template-columns: 0.2fr 1fr;
+        grid-template-rows: 0.1fr 1fr;
+        grid-template-areas:
+            "logo header"
+            "side content";
+    }
+
+    .header_text h1 {
+        font-size: 25px;
+    }
+
+    .header_text h2 {
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+    .logo_container {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .logo_container span,
+    .sidebar .tabs_container ul li a {
+        display: none;
+    }
+
+    .logo {
+        width: 80px;
+        padding-bottom: 8px;
+        padding-left: 8px;
+    }
+
+    .sidebar .tabs_container ul li {
+        padding: 15px;
+    }
+
+    .sidebar .tabs_container ul li span {
+        display: flex;
+        padding-right: 0px;
+    }
+
+    .data_area {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 630px) {
+    .expense_card {
+        height: 30px;
+    }
+
+    .expense_card .slot,
+    .expense_card .expense_buttons button {
+        font-size: 12px;
+    }
+
+    .tab_content_container .tab_content section .heading {
+        height: 30px;
+        margin-top: 25px;
+    }
+
+    .tab_content_container .tab_content section .heading div,
+    .tab_content p {
+        font-size: 14px;
+    }
+
+    .tab_content .expense_button_with_examples_two .expense {
+        height: 50px;
+        font-size: 32px;
+    }
+
+    .tab_content_container .tab_content header h4 {
+        font-size: 35px;
+        padding-bottom: 5px;
+    }
+}
+
+@media (max-width: 573px) {
+    .tab_content .multiple_examples_line,
+    .tab_content .button_with_examples .image_two {
+        display: none;
+    }
+
+    .tab_content .single_example_line {
+        display: block;
+    }
+
+    .tab_content .button_with_examples {
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 493px) {
+    .page_load_container .page_load_text {
+        padding-left: 1px;
+    }
+
+    .page_load_container .page_load_text h3 {
+        font-size: 20px;
+    }
+
+    .page_load_container .page_load_text p,
+    .error {
+        font-size: 14px;
+    }
+
+    .expense_card .slot,
+    .expense_card .expense_buttons button {
+        font-size: 10px;
+    }
+
+    .tab_content_container .tab_content section .heading div,
+    .tab_content p {
+        font-size: 12px;
+    }
+
+    .tab_content_container .tab_content header h4 {
+        font-size: 28px;
+        padding-bottom: 5px;
+    }
+
+    .form_popup .wrapper {
+        padding: 18px 20px;
+        max-width: 350px;
+    }
+
+    .form_popup .wrapper i {
+        font-size: 13px;
+    }
+
+    .form_popup .wrapper header {
+        font-size: 18px;
+        margin-bottom: 25px;
+    }
+
+    .form_popup .wrapper fieldset .input_field,
+    .form_popup .wrapper fieldset .submit_button {
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .form_popup .wrapper fieldset .input_field label {
+        width: 120px;
+        margin-right: 10px;
+        font-size: 14px;
+    }
+
+    .form_popup .wrapper fieldset .input_field input {
+        font-size: 13px;
+        padding: 6px 8px;
+    }
+
+    .form_popup .wrapper fieldset .choose {
+        padding: 6px 8px;
+    }
+}
+
+@media (max-width: 450px) {
+    main {
+        grid-template-columns: 0.1fr 1fr;
+        grid-template-rows: 0.05fr 1fr;
+        grid-template-areas:
+            "logo header"
+            "side content";
+    }
+
+    .header_text h1 {
+        font-size: 19px;
+    }
+
+    .header_text h2 {
+        font-size: 11px;
+    }
+
+    .logo_container {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .logo {
+        width: 60px;
+        padding-bottom: 8px;
+        padding-left: 8px;
+    }
+
+    .sidebar .tabs_container ul li {
+        padding: 10px;
+    }
+
+    .sidebar .tabs_container ul li span {
+        font-size: 16px;
+    }
+
+    .tab_content_container .tab_content header h4 {
+        font-size: 24px;
+        padding-bottom: 3px;
+    }
+
+    .tab_content p,
+    .tab_content_container .tab_content section .heading div {
+        font-size: 10px;
+    }
+
+    .expense_card {
+        height: 20px;
+    }
+
+    .expense_card .slot,
+    .expense_card .expense_buttons button {
+        font-size: 8px;
+    }
+
+    .tab_content_container .tab_content section .heading {
+        height: 25px;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 420px) {
+    .data_area {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 399px) {
+    .button_with_examples,
+    .expense_button_with_examples_one {
+        height: 100px;
+    }
+
+    .button_with_examples .container {
+        width: 100px;
+    }
+
+    .tab_content .add_input_button {
+        width: 100px;
+        font-size: 30px;
+    }
+
+    .card {
+        width: 100px;
+        height: 100px;
+        padding: 0.5px;
+    }
+
+    .card .top {
+        font-size: 13px;
+        padding: 3px 0;
+        border-radius: 2px;
+    }
+
+    .card .type {
+        font-size: 7px;
+        padding: 2px 0;
+        border-radius: 2px;
+        margin-top: 0.5px;
+        margin-bottom: 0px;
+    }
+
+    .card .middle {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        font-size: 10px;
+        margin-bottom: 3px;
+    }
+
+    .card .modify button {
+        padding-top: 4px;
+        padding-bottom: 4px;
+        font-size: 8px;
+        border-radius: 2px;
+    }
+
+    .data_area {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 330px) {
+    main {
+        grid-template-columns: 0.05fr 1fr;
+        grid-template-rows: 0.01fr 1fr;
+        grid-template-areas:
+            "logo header"
+            "side content";
+    }
+
+    .header_text {
+        padding: 5px;
+    }
+
+    .header_text h1 {
+        font-size: 16px;
+    }
+
+    .header_text h2 {
+        font-size: 9px;
+    }
+
+    .logo_container {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .logo {
+        width: 40px;
+        padding-bottom: 4px;
+        padding-left: 10px;
+    }
+
+    .sidebar .tabs_container ul li {
+        padding: 8px;
+    }
+
+    .sidebar .tabs_container ul li span {
+        font-size: 12px;
+    }
+
+    .page_load_container .page_load_text h3 {
+        font-size: 17px;
+    }
+
+    .page_load_container .page_load_text p {
+        font-size: 11px;
+    }
+
+    .tab_content_container .tab_content header h4 {
+        font-size: 20px;
+        padding-bottom: 3px;
+    }
+
+    .tab_content p,
+    .tab_content_container .tab_content section .heading div {
+        font-size: 8px;
+    }
+
+    .expense_card {
+        height: 20px;
+    }
+
+    .expense_card .slot,
+    .expense_card .expense_buttons button {
+        font-size: 7px;
+    }
+
+    .tab_content_container .tab_content section .heading {
+        height: 20px;
+        margin-top: 20px;
+    }
+}

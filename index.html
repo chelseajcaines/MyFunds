@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Budget App</title>
+
+        <!-- Font Awesome -->
+        <script
+            src="https://kit.fontawesome.com/3e3bead657.js"
+            crossorigin="anonymous"
+        ></script>
+
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <!--///////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+    <body>
+        <!--///////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+        <div class="outside_wrapper">
+            <!-- Main grid display ------------------------------------------------------------>
+
+            <main>
+                <!-- Grid header -------------------------------------------------------------->
+                <div class="logo_container" title="Home">
+                    <img class="logo" src="images/logo.png" alt="logo" /><span
+                        >MyFunds</span
+                    >
+                </div>
+                <div class="header_text">
+                    <h1 id="current_weekday"></h1>
+                    <h2 id="current_date"></h2>
+                </div>
+
+                <!--  Grid Side Navigation Bar ------------------------------------------------>
+
+                <div class="sidebar">
+                    <div class="tabs_container">
+                        <ul>
+                            <li tab_link href="#budget_content">
+                                <span
+                                    class="fa-solid fa-scale-balanced"
+                                    tab_link
+                                    href="#budget_content"
+                                ></span
+                                ><a tab_link href="#budget_content">Budget</a>
+                            </li>
+                            <li tab_link href="#income_content">
+                                <span
+                                    class="fa-solid fa-coins"
+                                    tab_link
+                                    href="#income_content"
+                                ></span
+                                ><a tab_link href="#income_content">Income</a>
+                            </li>
+                            <li tab_link href="#expenses_content">
+                                <span
+                                    class="fa-regular fa-credit-card"
+                                    tab_link
+                                    href="#expenses_content"
+                                ></span
+                                ><a tab_link href="#expenses_content"
+                                    >Expenses</a
+                                >
+                            </li>
+                            <li tab_link href="#goals_content">
+                                <span
+                                    class="fa-solid fa-trophy"
+                                    tab_link
+                                    href="#goals_content"
+                                ></span
+                                ><a tab_link href="#goals_content">Goals</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Grid content display ------------------------------------------------->
+
+                <div class="tab_content_container">
+                    <div class="page_load_container">
+                        <div class="page_load_text">
+                            <h3>
+                                With <span>MyFunds</span>, you can keep track of
+                                your financial activities.
+                            </h3>
+                            <br />
+                            <p>
+                                To remove all displayed financial information,
+                                simply close the window or hit refresh.
+                            </p>
+                        </div>
+                        <div class="page_load_image_container">
+                            <img
+                                src="images/pageloadimage.png"
+                                alt="page load image"
+                                class="page_load_image"
+                            />
+                        </div>
+                    </div>
+                    <!-- Budget tab content ---------------------------->
+                    <div class="tab_content" id="budget_content">
+                        <header>
+                            <h4>My Budget</h4>
+                            <hr />
+                        </header>
+                        <section>
+                            <p class="multiple_examples_line">
+                                List allotments for bills, subscriptions,
+                                groceries, etc. Examples shown below.
+                            </p>
+                            <p class="single_example_line">
+                                List allotments for bills, subscriptions,
+                                groceries, etc. Example shown below.
+                            </p>
+                            <div class="button_with_examples">
+                                <div class="budgetExample550">
+                                    <img
+                                        src="images/budgetExample550.png"
+                                        alt="budget example 550"
+                                        class="budget_example_550"
+                                    />
+                                </div>
+                                <button
+                                    class="add_input_button budget"
+                                    form_popup="#budget_form_popup"
+                                    title="Add Block"
+                                >
+                                    +
+                                </button>
+
+                                <div class="container">
+                                    <img
+                                        src="images/budgetexampleone.png"
+                                        alt="budget example one"
+                                    />
+                                </div>
+                                <div class="container image_two">
+                                    <img
+                                        src="images/budgetexampletwo.png"
+                                        alt="budget example two"
+                                    />
+                                </div>
+                                <div class="container image_three">
+                                    <img
+                                        src="images/budgetexamplethree.png"
+                                        alt="budget example three"
+                                    />
+                                </div>
+                            </div>
+                            <div class="data_area" id="budget_data_items">
+                                <!-- where user data template will be displayed -->
+                            </div>
+                        </section>
+                    </div>
+
+                    <!-- Income tab content ------------------------------------------->
+                    <div class="tab_content" id="income_content">
+                        <header>
+                            <h4>My Income</h4>
+                            <hr />
+                        </header>
+                        <section>
+                            <p class="multiple_examples_line">
+                                List reocurring income or one time payments.
+                                Examples shown below.
+                            </p>
+                            <p class="single_example_line">
+                                List reocurring income or one time payments.
+                                Example shown below.
+                            </p>
+                            <div class="button_with_examples">
+                                <div class="incomeExample550">
+                                    <img
+                                        src="images/incomeExample550.png"
+                                        alt="income example 550"
+                                        class="income_example_550"
+                                    />
+                                </div>
+                                <button
+                                    class="add_input_button income"
+                                    form_popup="#income_form_popup"
+                                    title="Add Block"
+                                >
+                                    +
+                                </button>
+
+                                <div class="container">
+                                    <img
+                                        src="images/incomeexampleone.png"
+                                        alt="income example one"
+                                    />
+                                </div>
+                                <div class="container image_two">
+                                    <img
+                                        src="images/incomeexampletwo.png"
+                                        alt="income example two"
+                                    />
+                                </div>
+                                <div class="container image_three">
+                                    <img
+                                        src="images/incomeexamplethree.png"
+                                        alt="income example three"
+                                    />
+                                </div>
+                            </div>
+                            <div class="data_area" id="income_data_items">
+                                <!-- where user data template will be displayed -->
+                            </div>
+                        </section>
+                    </div>
+
+                    <!----- Expenses tab content ------------------------------------------->
+                    <div class="tab_content" id="expenses_content">
+                        <header>
+                            <h4>My Expenses</h4>
+                            <hr />
+                        </header>
+                        <section>
+                            <p>
+                                List all goods purchased and payments made
+                                throughout the day. Examples shown below.
+                            </p>
+                            <div class="expense_button_with_examples_one">
+                                <button
+                                    class="add_input_button expense"
+                                    form_popup="#expenses_form_popup"
+                                    title="Add Item"
+                                >
+                                    +
+                                </button>
+                                <div class="expense_example_container">
+                                    <img
+                                        class="expense_example"
+                                        src="images/expenseexample.png"
+                                        alt="expense example"
+                                    />
+                                </div>
+                            </div>
+                            <div class="expense_button_with_examples_two">
+                                <img
+                                    class="expense_example"
+                                    src="images/expenseexample.png"
+                                    alt="expense example"
+                                />
+                                <button
+                                    class="add_input_button expense"
+                                    form_popup="#expenses_form_popup"
+                                    title="Add Item"
+                                >
+                                    +
+                                </button>
+                            </div>
+                            <div class="heading">
+                                <div>Category</div>
+                                <div>Product</div>
+                                <div>Cost</div>
+                                <div>Date</div>
+                                <div></div>
+                            </div>
+                            <div
+                                class="expense_data_area"
+                                id="expense_data_items"
+                            >
+                                <!-- where user data template will be displayed -->
+                            </div>
+                        </section>
+                    </div>
+
+                    <!-- Goals tab content ------------------------------------------->
+                    <div class="tab_content" id="goals_content">
+                        <header>
+                            <h4>My Goals</h4>
+                            <hr />
+                        </header>
+                        <section>
+                            <p class="multiple_examples_line">
+                                List savings and financial goals. Examples shown
+                                below.
+                            </p>
+                            <p class="single_example_line">
+                                List savings and financial goals. Example shown
+                                below.
+                            </p>
+                            <div class="button_with_examples">
+                                <div class="goalsExample550">
+                                    <img
+                                        src="images/goalsExample550.png"
+                                        alt="goals example 550"
+                                        class="goals_example_550"
+                                    />
+                                </div>
+                                <button
+                                    class="add_input_button goals"
+                                    form_popup="#goals_form_popup"
+                                    title="Add Block"
+                                >
+                                    +
+                                </button>
+
+                                <div class="container">
+                                    <img
+                                        src="images/goalexampleone.png"
+                                        alt="goal example one"
+                                    />
+                                </div>
+                                <div class="container image_two">
+                                    <img
+                                        src="images/goalexampletwo.png"
+                                        alt="goal example two"
+                                    />
+                                </div>
+                                <div class="container image_three">
+                                    <img
+                                        src="images/goalexamplethree.png"
+                                        alt="goal example three"
+                                    />
+                                </div>
+                            </div>
+                            <div class="data_area" id="goal_data_items">
+                                <!-- where user data template will be displayed -->
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-------------------------- User data display templates  ---------------------------------------------->
+
+        <!-- Budget content template ------------------------------>
+        <template id="budget_template">
+            <div class="card" uid>
+                <div class="top">
+                    <div budget_name></div>
+                </div>
+                <div class="type" budget_type></div>
+                <div class="middle">
+                    <div budget_interval></div>
+                    <div budget_amount></div>
+                </div>
+                <div class="modify">
+                    <button
+                        class="fa-solid fa-pen-to-square"
+                        budget_edit
+                        title="Edit"
+                    ></button>
+                    <button
+                        class="fa-solid fa-trash-can"
+                        budget_delete
+                        title="Delete"
+                    ></button>
+                </div>
+            </div>
+        </template>
+
+        <!-- Income content template ------------------------------>
+
+        <template id="income_template">
+            <div class="card" uid>
+                <div class="top">
+                    <div income_source></div>
+                </div>
+                <div class="type" income_type></div>
+                <div class="middle">
+                    <div income_interval></div>
+                    <div income_amount></div>
+                </div>
+                <div class="modify">
+                    <button
+                        class="fa-solid fa-pen-to-square"
+                        income_edit
+                        title="Edit"
+                    ></button>
+                    <button
+                        class="fa-solid fa-trash-can"
+                        income_delete
+                        title="Delete"
+                    ></button>
+                </div>
+            </div>
+        </template>
+
+        <!-- Expense content template ------------------------------>
+
+        <template id="expenses_template">
+            <div class="expense_card" uid>
+                <div expense_category class="slot"></div>
+                <div expense_product class="slot"></div>
+                <div expense_cost class="slot"></div>
+                <div expense_date class="slot"></div>
+                <div class="expense_buttons slot">
+                    <button expense_edit title="Edit">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </button>
+                    <button expense_delete title="Delete">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                </div>
+            </div>
+        </template>
+
+        <!-- Goals content template ------------------------------>
+
+        <template id="goals_template">
+            <div class="card" uid>
+                <div class="top">
+                    <div goal_name></div>
+                </div>
+                <div class="type" goal_date></div>
+                <div class="middle">
+                    <div goal_current></div>
+                    <div goal_target></div>
+                </div>
+                <div class="modify">
+                    <button
+                        class="fa-solid fa-pen-to-square goals_edit_button"
+                        goal_edit
+                        title="Edit"
+                    ></button>
+                    <button
+                        class="fa-solid fa-trash-can goals_delete_button"
+                        goal_delete
+                        title="Delete"
+                    ></button>
+                </div>
+            </div>
+        </template>
+
+        <!--//////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+        <!-- Forms (styled to be modals) -------------------------------------------------------->
+
+        <!-- Budget Form ------------------------------------------------------------------------>
+        <div class="form_popup" id="budget_form_popup">
+            <div class="wrapper">
+                <div class="close_button">
+                    <i
+                        class="close fa-solid fa-x"
+                        close_popup="#budget_form_popup"
+                    ></i>
+                </div>
+                <header>Enter budget info</header>
+                <p class="error" id="budget_error">
+                    * Please fill out all fields.
+                </p>
+                <form id="budget_form" action="#" method="GET" form>
+                    <fieldset>
+                        <!-- Budget 1st data entry - Card title -->
+                        <div class="input_field">
+                            <label for="budget_name">Title:</label>
+                            <input
+                                type="text"
+                                id="budget_name"
+                                name="budget_name"
+                                maxlength="10"
+                                required
+                            />
+                        </div>
+
+                        <!-- Budget 2nd data entry - budget amount -->
+                        <div class="input_field">
+                            <label for="budget_amount">Alotment:</label>
+                            <input
+                                type="number"
+                                id="budget_amount"
+                                name="budget_amount"
+                                placeholder="Your spending maximum"
+                                oninput="limitInputLength(this, 6)"
+                                min="0"
+                                required
+                            />
+                        </div>
+
+                        <!-- Budget 3rd data entry - Amount Interval -->
+                        <div class="input_field">
+                            <label for="budget_interval"
+                                >Amount Interval:</label
+                            >
+                            <select
+                                class="choose"
+                                id="budget_interval"
+                                name="budget_interval"
+                                required
+                            >
+                                <option value="" class="selection">
+                                    Select
+                                </option>
+                                <option value="Hourly" class="selection">
+                                    Hourly
+                                </option>
+                                <option value="Daily" class="selection">
+                                    Daily
+                                </option>
+                                <option value="Weekly" class="selection">
+                                    Weekly
+                                </option>
+                                <option value="Bi-weekly" class="selection">
+                                    Bi-weekly
+                                </option>
+                                <option value="Monthly" class="selection">
+                                    Monthly
+                                </option>
+                                <option value="Bi-monthly" class="selection">
+                                    Bi-monthly
+                                </option>
+                                <option value="Annually" class="selection">
+                                    Annually
+                                </option>
+                                <option value="Bi-annually" class="selection">
+                                    Bi-annually
+                                </option>
+                                <option value="Quarterly" class="selection">
+                                    Quarterly
+                                </option>
+                            </select>
+                        </div>
+
+                        <!-- Budget 4th data entry - budget type -->
+                        <div class="input_field">
+                            <label for="budget_type">Type:</label>
+                            <select
+                                class="choose"
+                                id="budget_type"
+                                name="budget_type"
+                                required
+                            >
+                                <option value="" class="selection">
+                                    Select
+                                </option>
+                                <option value="Household" class="selection">
+                                    Household
+                                </option>
+                                <option
+                                    value="Transportation"
+                                    class="selection"
+                                >
+                                    Transportation
+                                </option>
+                                <option value="Self-Care" class="selection">
+                                    Self-Care
+                                </option>
+                                <option
+                                    value="Family/Spouse/Kid(s)"
+                                    class="selection"
+                                >
+                                    Family/Spouse/Kid(s)
+                                </option>
+                                <option value="Pet" class="selection">
+                                    Pet
+                                </option>
+                                <option
+                                    value="Food and Drink"
+                                    class="selection"
+                                >
+                                    Food and Drink
+                                </option>
+                                <option value="Clothing" class="selection">
+                                    Clothing
+                                </option>
+                                <option value="Travel" class="selection">
+                                    Travel
+                                </option>
+                                <option value="Student Fees" class="selection">
+                                    Student Fees
+                                </option>
+                                <option value="Occassion" class="selection">
+                                    Occassion
+                                </option>
+                                <option value="Hobbies" class="selection">
+                                    Hobbies
+                                </option>
+                                <option
+                                    value="Social Outings"
+                                    class="selection"
+                                >
+                                    Social Outings
+                                </option>
+                                <option value="Medical" class="selection">
+                                    Medical
+                                </option>
+                                <option
+                                    value="Charity/Donations"
+                                    class="selection"
+                                >
+                                    Charity/Donations
+                                </option>
+                                <option
+                                    value="Misc/Non-essentials"
+                                    class="selection"
+                                >
+                                    Misc/Non-essentials
+                                </option>
+                            </select>
+                        </div>
+                        <button
+                            id="budget_submit_button"
+                            class="submit_button"
+                            display_data_items="#budget_data_items"
+                        >
+                            Submit
+                        </button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+
+        <!-- Income form -------------------------------------------------------------------->
+
+        <div class="form_popup" id="income_form_popup">
+            <div class="wrapper">
+                <div class="close_button">
+                    <i
+                        class="close fa-solid fa-x"
+                        close_popup="#income_form_popup"
+                    ></i>
+                </div>
+                <header>Enter income info</header>
+                <p class="error" id="income_error">
+                    * Please fill out all fields.
+                </p>
+                <form id="income_form" action="#" method="GET" form>
+                    <fieldset>
+                        <!-- Income 1st input - Income Source -->
+                        <div class="input_field">
+                            <label for="income_source">Income source:</label>
+                            <input
+                                type="text"
+                                id="income_source"
+                                placeholder="Employer/Job title"
+                                name="income_source"
+                                maxlength="10"
+                                required
+                            />
+                        </div>
+
+                        <!-- Income 2nd input - Income type -->
+                        <div class="input_field">
+                            <label for="income_type">Income Type:</label>
+                            <select
+                                class="choose"
+                                id="income_type"
+                                name="income_type"
+                                required
+                            >
+                                <option value="" class="selection">
+                                    Select
+                                </option>
+                                <option
+                                    value="Single Payment"
+                                    class="selection"
+                                >
+                                    Single Payment
+                                </option>
+                                <option value="Seasonal" class="selection">
+                                    Seasonal
+                                </option>
+                                <option value="Casual" class="selection">
+                                    Casual
+                                </option>
+                                <option value="Part-time" class="selection">
+                                    Part-time
+                                </option>
+                                <option value="Full-time" class="selection">
+                                    Full-time
+                                </option>
+                                <option value="Side Job" class="selection">
+                                    Side job
+                                </option>
+                            </select>
+                        </div>
+
+                        <!-- Income 3rd input - Income Interval -->
+                        <div class="input_field">
+                            <label for="income_interval">Interval:</label>
+                            <select
+                                class="choose"
+                                id="income_interval"
+                                name="income_interval"
+                                required
+                            >
+                                <option value="" class="selection">
+                                    Select
+                                </option>
+                                <option value="Hourly" class="selection">
+                                    Hourly
+                                </option>
+                                <option value="Daily" class="selection">
+                                    Daily
+                                </option>
+                                <option value="Weekly" class="selection">
+                                    Weekly
+                                </option>
+                                <option value="Bi-weekly" class="selection">
+                                    Bi-weekly
+                                </option>
+                                <option value="Monthly" class="selection">
+                                    Monthly
+                                </option>
+                                <option value="Bi-monthly" class="selection">
+                                    Bi-monthly
+                                </option>
+                                <option value="Annually" class="selection">
+                                    Annually
+                                </option>
+                                <option value="Bi-annually" class="selection">
+                                    Bi-annually
+                                </option>
+                                <option value="Quarterly" class="selection">
+                                    Quarterly
+                                </option>
+                            </select>
+                        </div>
+
+                        <!-- Income 4th input - income amount -->
+                        <div class="input_field">
+                            <label for="income_amount">Amount:</label>
+                            <input
+                                type="number"
+                                id="income_amount"
+                                name="income_amount"
+                                oninput="limitInputLength(this, 6)"
+                                min="0"
+                                required
+                            />
+                        </div>
+                        <button
+                            class="submit_button"
+                            id="income_submit_button"
+                            display_data_items="#income_data_items"
+                        >
+                            Submit
+                        </button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+
+        <!-- Expenses form ------------------------------------------------------------------->
+
+        <div class="form_popup" id="expenses_form_popup">
+            <div class="wrapper">
+                <div class="close_button">
+                    <i
+                        class="close fa-solid fa-x"
+                        close_popup="#expenses_form_popup"
+                    ></i>
+                </div>
+                <header>Enter purchase info</header>
+                <p class="error" id="expense_error">
+                    * Please fill out all fields.
+                </p>
+                <form id="expenses_form" action="#" method="GET" form>
+                    <fieldset>
+                        <!-- Expenses 1st input - expense category -->
+                        <div class="input_field">
+                            <label for="expense_category">Category:</label>
+                            <select
+                                class="choose"
+                                id="expense_category"
+                                name="expense_category"
+                                required
+                            >
+                                <option value="" class="selection">
+                                    Select
+                                </option>
+                                <option value="Household" class="selection">
+                                    Household
+                                </option>
+                                <option
+                                    value="Transportation"
+                                    class="selection"
+                                >
+                                    Transportation
+                                </option>
+                                <option value="Self-Care" class="selection">
+                                    Self-Care
+                                </option>
+                                <option
+                                    value="Family/Spouse/Kid(s)"
+                                    class="selection"
+                                >
+                                    Family/Spouse/Kid(s)
+                                </option>
+                                <option value="Pet" class="selection">
+                                    Pet
+                                </option>
+                                <option
+                                    value="Food and Drink"
+                                    class="selection"
+                                >
+                                    Food and Drink
+                                </option>
+                                <option value="Clothing" class="selection">
+                                    Clothing
+                                </option>
+                                <option value="Travel" class="selection">
+                                    Travel
+                                </option>
+                                <option value="Student Fees" class="selection">
+                                    Student Fees
+                                </option>
+                                <option value="Occassion" class="selection">
+                                    Occassion
+                                </option>
+                                <option value="Hobbies" class="selection">
+                                    Hobbies
+                                </option>
+                                <option
+                                    value="Social Outings"
+                                    class="selection"
+                                >
+                                    Social Outings
+                                </option>
+                                <option value="Medical" class="selection">
+                                    Medical
+                                </option>
+                                <option
+                                    value="Charity/Donations"
+                                    class="selection"
+                                >
+                                    Charity/Donations
+                                </option>
+                                <option
+                                    value="Misc/Non-essentials"
+                                    class="selection"
+                                >
+                                    Misc/Non-essentials
+                                </option>
+                            </select>
+                        </div>
+
+                        <!-- Expenses 2nd input - Expense product -->
+                        <div class="input_field">
+                            <label for="expense_product">Product:</label>
+                            <input
+                                type="text"
+                                id="expense_product"
+                                name="expense_product"
+                                placeholder="Item purchased"
+                                maxlength="10"
+                                required
+                            />
+                        </div>
+
+                        <!-- Expenses 3rd input - expense cost -->
+                        <div class="input_field">
+                            <label for="expense_cost">Cost:</label>
+                            <input
+                                type="number"
+                                id="expense_cost"
+                                name="expense_cost"
+                                oninput="limitInputLength(this, 6)"
+                                min="0"
+                                required
+                            />
+                        </div>
+
+                        <!-- Expenses 4th input - Expense Transaction Date -->
+                        <div class="input_field">
+                            <label for="expense_date">Date of Purchase:</label>
+                            <input
+                                class="choose"
+                                type="date"
+                                id="expense_date"
+                                name="expense_date"
+                                required
+                            />
+                        </div>
+                        <button
+                            id="expenses_submit_button"
+                            class="submit_button"
+                            display_data_items="#expense_data_items"
+                        >
+                            Submit
+                        </button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+
+        <!-- Goals form --------------------------------------------------------------------------->
+
+        <div class="form_popup" id="goals_form_popup">
+            <div class="wrapper">
+                <div class="close_button">
+                    <i
+                        class="close fa-solid fa-x"
+                        close_popup="#goals_form_popup"
+                    ></i>
+                </div>
+                <header>
+                    <p>Enter goal info</p>
+                </header>
+                <p class="error" id="goals_error">
+                    * Please fill out all fields.
+                </p>
+                <form id="goals_form" action="#" method="GET" form>
+                    <fieldset>
+                        <!-- Goals 1st input - Name of goal -->
+                        <div class="input_field">
+                            <label for="goal_name">Title:</label>
+                            <input
+                                type="text"
+                                id="goal_name"
+                                placeholder="Item, event, etc."
+                                name="goal_name"
+                                maxlength="10"
+                                required
+                            />
+                        </div>
+
+                        <!-- Goals 2nd input - goal target date -->
+                        <div class="input_field">
+                            <label for="goal_date">Target Date:</label>
+                            <input
+                                type="date"
+                                id="goal_date"
+                                name="goal_date"
+                                required
+                            />
+                        </div>
+
+                        <!-- Goals 3rd input - Savings target -->
+                        <div class="input_field">
+                            <label for="goal_target">Target Amount:</label>
+                            <input
+                                type="number"
+                                id="goal_target"
+                                name="goal_target"
+                                oninput="limitInputLength(this, 6)"
+                                min="0"
+                                required
+                            />
+                        </div>
+
+                        <!-- Goals 4th input - current amount -->
+                        <div class="input_field">
+                            <label for="goal_current"
+                                >Current Amount Saved:</label
+                            >
+                            <input
+                                type="number"
+                                id="goal_current"
+                                name="goal_current"
+                                oninput="limitInputLength(this, 6)"
+                                min="0"
+                                required
+                            />
+                        </div>
+                        <button
+                            id="goals_submit_button"
+                            class="submit_button"
+                            display_data_items="#goals_data_items"
+                        >
+                            Submit
+                        </button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </body>
+    <script src="script.js"></script>
+</html>
