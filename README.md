@@ -19,9 +19,15 @@
 
 <p>Once a card or list item is displayed, the user can then edit or remove items to their satisfaction.</p>
 
-<p>Check out MyFunds by clicking this link! </p>
+<p>Check out MyFunds by clicking this link! https://chelseajcaines.github.io/MyFunds/ </p>
+<hr/>
 
 ### Motivation
 
 <p>I wanted a simple app where I can enter and see all of my financial activity, instead of jumping between multiple banking apps. Inspiration also came from individuals who have multiple incomes such as side hustles, passive income, part-time jobs, etc. It can all be easily monitored using this app.</p>
+<hr/>
+
+### Built with
+
+
 
