@@ -330,7 +330,7 @@ const setProperties_displayData = (dataType, uid) => {
         expenseClone
             .querySelector("[expense_edit]")
             ?.addEventListener("click", () =>
-                handleEditCardData("expense", uid)
+                handleEditCardData("expenses", uid)
             )
         // call back remove function
         expenseClone
