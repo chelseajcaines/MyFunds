@@ -438,7 +438,7 @@
             <div class="wrapper">
                 <div class="close_button">
                     <i
-                        class="close fa-solid fa-x"
+                        class="close fa-solid fa-xmark"
                         close_popup="#budget_form_popup"
                     ></i>
                 </div>
@@ -450,24 +450,25 @@
                     <fieldset>
                         <!-- Budget 1st data entry - Card title -->
                         <div class="input_field">
-                            <label for="budget_name">Title:</label>
+                            <label for="budget_name">Title</label>
                             <input
                                 type="text"
                                 id="budget_name"
                                 name="budget_name"
                                 maxlength="10"
                                 required
+                                placeholder="Rent"
                             />
                         </div>
 
                         <!-- Budget 2nd data entry - budget amount -->
                         <div class="input_field">
-                            <label for="budget_amount">Alotment:</label>
+                            <label for="budget_amount">Max Amount</label>
                             <input
                                 type="number"
                                 id="budget_amount"
                                 name="budget_amount"
-                                placeholder="Your spending maximum"
+                                placeholder="900"
                                 oninput="limitInputLength(this, 6)"
                                 min="0"
                                 required
@@ -476,121 +477,63 @@
 
                         <!-- Budget 3rd data entry - Amount Interval -->
                         <div class="input_field">
-                            <label for="budget_interval"
-                                >Amount Interval:</label
-                            >
+                            <label for="budget_interval">Amount Interval</label>
                             <select
                                 class="choose"
                                 id="budget_interval"
                                 name="budget_interval"
                                 required
                             >
-                                <option value="" class="selection">
-                                    Select
-                                </option>
-                                <option value="Hourly" class="selection">
-                                    Hourly
-                                </option>
-                                <option value="Daily" class="selection">
-                                    Daily
-                                </option>
-                                <option value="Weekly" class="selection">
-                                    Weekly
-                                </option>
-                                <option value="Bi-weekly" class="selection">
-                                    Bi-weekly
-                                </option>
-                                <option value="Monthly" class="selection">
-                                    Monthly
-                                </option>
-                                <option value="Bi-monthly" class="selection">
-                                    Bi-monthly
-                                </option>
-                                <option value="Annually" class="selection">
-                                    Annually
-                                </option>
-                                <option value="Bi-annually" class="selection">
-                                    Bi-annually
-                                </option>
-                                <option value="Quarterly" class="selection">
-                                    Quarterly
-                                </option>
+                                <option disabled selected>Monthly</option>
+                                <option value="Hourly">Hourly</option>
+                                <option value="Daily">Daily</option>
+                                <option value="Weekly">Weekly</option>
+                                <option value="Bi-weekly">Bi-weekly</option>
+                                <option value="Monthly">Monthly</option>
+                                <option value="Bi-monthly">Bi-monthly</option>
+                                <option value="Annually">Annually</option>
+                                <option value="Bi-annually">Bi-annually</option>
+                                <option value="Quarterly">Quarterly</option>
                             </select>
                         </div>
 
                         <!-- Budget 4th data entry - budget type -->
                         <div class="input_field">
-                            <label for="budget_type">Type:</label>
+                            <label for="budget_type">Type</label>
                             <select
                                 class="choose"
                                 id="budget_type"
                                 name="budget_type"
                                 required
                             >
-                                <option value="" class="selection">
-                                    Select
-                                </option>
-                                <option value="Household" class="selection">
-                                    Household
-                                </option>
-                                <option
-                                    value="Transportation"
-                                    class="selection"
-                                >
+                                <option disabled selected>Household</option>
+                                <option value="Household">Household</option>
+                                <option value="Transportation">
                                     Transportation
                                 </option>
-                                <option value="Self-Care" class="selection">
-                                    Self-Care
-                                </option>
-                                <option
-                                    value="Family/Spouse/Kid(s)"
-                                    class="selection"
-                                >
+                                <option value="Self-Care">Self-Care</option>
+                                <option value="Family/Spouse/Kid(s)">
                                     Family/Spouse/Kid(s)
                                 </option>
-                                <option value="Pet" class="selection">
-                                    Pet
-                                </option>
-                                <option
-                                    value="Food and Drink"
-                                    class="selection"
-                                >
+                                <option value="Pet">Pet</option>
+                                <option value="Food and Drink">
                                     Food and Drink
                                 </option>
-                                <option value="Clothing" class="selection">
-                                    Clothing
-                                </option>
-                                <option value="Travel" class="selection">
-                                    Travel
-                                </option>
-                                <option value="Student Fees" class="selection">
+                                <option value="Clothing">Clothing</option>
+                                <option value="Travel">Travel</option>
+                                <option value="Student Fees">
                                     Student Fees
                                 </option>
-                                <option value="Occassion" class="selection">
-                                    Occassion
-                                </option>
-                                <option value="Hobbies" class="selection">
-                                    Hobbies
-                                </option>
-                                <option
-                                    value="Social Outings"
-                                    class="selection"
-                                >
+                                <option value="Occassion">Occassion</option>
+                                <option value="Hobbies">Hobbies</option>
+                                <option value="Social Outings">
                                     Social Outings
                                 </option>
-                                <option value="Medical" class="selection">
-                                    Medical
-                                </option>
-                                <option
-                                    value="Charity/Donations"
-                                    class="selection"
-                                >
+                                <option value="Medical">Medical</option>
+                                <option value="Charity/Donations">
                                     Charity/Donations
                                 </option>
-                                <option
-                                    value="Misc/Non-essentials"
-                                    class="selection"
-                                >
+                                <option value="Misc/Non-essentials">
                                     Misc/Non-essentials
                                 </option>
                             </select>
@@ -613,7 +556,7 @@
             <div class="wrapper">
                 <div class="close_button">
                     <i
-                        class="close fa-solid fa-x"
+                        class="close fa-solid fa-xmark"
                         close_popup="#income_form_popup"
                     ></i>
                 </div>
@@ -625,7 +568,7 @@
                     <fieldset>
                         <!-- Income 1st input - Income Source -->
                         <div class="input_field">
-                            <label for="income_source">Income source:</label>
+                            <label for="income_source">Income source</label>
                             <input
                                 type="text"
                                 id="income_source"
@@ -638,85 +581,50 @@
 
                         <!-- Income 2nd input - Income type -->
                         <div class="input_field">
-                            <label for="income_type">Income Type:</label>
+                            <label for="income_type">Income Type</label>
                             <select
                                 class="choose"
                                 id="income_type"
                                 name="income_type"
                                 required
                             >
-                                <option value="" class="selection">
-                                    Select
-                                </option>
-                                <option
-                                    value="Single Payment"
-                                    class="selection"
-                                >
+                                <option disabled selected>Full-Time</option>
+                                <option value="Single Payment">
                                     Single Payment
                                 </option>
-                                <option value="Seasonal" class="selection">
-                                    Seasonal
-                                </option>
-                                <option value="Casual" class="selection">
-                                    Casual
-                                </option>
-                                <option value="Part-time" class="selection">
-                                    Part-time
-                                </option>
-                                <option value="Full-time" class="selection">
-                                    Full-time
-                                </option>
-                                <option value="Side Job" class="selection">
-                                    Side job
-                                </option>
+                                <option value="Seasonal">Seasonal</option>
+                                <option value="Casual">Casual</option>
+                                <option value="Part-time">Part-time</option>
+                                <option value="Full-time">Full-time</option>
+                                <option value="Side Job">Side job</option>
                             </select>
                         </div>
 
                         <!-- Income 3rd input - Income Interval -->
                         <div class="input_field">
-                            <label for="income_interval">Interval:</label>
+                            <label for="income_interval">Interval</label>
                             <select
                                 class="choose"
                                 id="income_interval"
                                 name="income_interval"
                                 required
                             >
-                                <option value="" class="selection">
-                                    Select
-                                </option>
-                                <option value="Hourly" class="selection">
-                                    Hourly
-                                </option>
-                                <option value="Daily" class="selection">
-                                    Daily
-                                </option>
-                                <option value="Weekly" class="selection">
-                                    Weekly
-                                </option>
-                                <option value="Bi-weekly" class="selection">
-                                    Bi-weekly
-                                </option>
-                                <option value="Monthly" class="selection">
-                                    Monthly
-                                </option>
-                                <option value="Bi-monthly" class="selection">
-                                    Bi-monthly
-                                </option>
-                                <option value="Annually" class="selection">
-                                    Annually
-                                </option>
-                                <option value="Bi-annually" class="selection">
-                                    Bi-annually
-                                </option>
-                                <option value="Quarterly" class="selection">
-                                    Quarterly
-                                </option>
+                                <option disabled selected>Bi-Weekly</option>
+                                <option value="Hourly">Hourly</option>
+                                <option value="Daily">Daily</option>
+                                <option value="Weekly">Weekly</option>
+                                <option value="Bi-weekly">Bi-weekly</option>
+                                <option value="Monthly">Monthly</option>
+                                <option value="Bi-monthly">Bi-monthly</option>
+                                <option value="Annually">Annually</option>
+                                <option value="Bi-annually">Bi-annually</option>
+                                <option value="Quarterly">Quarterly</option>
                             </select>
                         </div>
 
                         <!-- Income 4th input - income amount -->
                         <div class="input_field">
-                            <label for="income_amount">Amount:</label>
+                            <label for="income_amount">Amount</label>
                             <input
                                 type="number"
                                 id="income_amount"
@@ -724,6 +632,7 @@
                                 oninput="limitInputLength(this, 6)"
                                 min="0"
                                 required
+                                placeholder="1300"
                             />
                         </div>
                         <button
@@ -744,7 +653,7 @@
             <div class="wrapper">
                 <div class="close_button">
                     <i
-                        class="close fa-solid fa-x"
+                        class="close fa-solid fa-xmark"
                         close_popup="#expenses_form_popup"
                     ></i>
                 </div>
@@ -756,77 +665,43 @@
                     <fieldset>
                         <!-- Expenses 1st input - expense category -->
                         <div class="input_field">
-                            <label for="expense_category">Category:</label>
+                            <label for="expense_category">Category</label>
                             <select
                                 class="choose"
                                 id="expense_category"
                                 name="expense_category"
                                 required
                             >
-                                <option value="" class="selection">
-                                    Select
-                                </option>
-                                <option value="Household" class="selection">
-                                    Household
-                                </option>
-                                <option
-                                    value="Transportation"
-                                    class="selection"
-                                >
-                                    Transportation
-                                </option>
-                                <option value="Self-Care" class="selection">
-                                    Self-Care
-                                </option>
-                                <option
-                                    value="Family/Spouse/Kid(s)"
-                                    class="selection"
-                                >
-                                    Family/Spouse/Kid(s)
-                                </option>
-                                <option value="Pet" class="selection">
-                                    Pet
-                                </option>
-                                <option
-                                    value="Food and Drink"
-                                    class="selection"
-                                >
+                                <option disabled selected>
                                     Food and Drink
                                 </option>
-                                <option value="Clothing" class="selection">
-                                    Clothing
+                                <option value="Household">Household</option>
+                                <option value="Transportation">
+                                    Transportation
                                 </option>
-                                <option value="Travel" class="selection">
-                                    Travel
+                                <option value="Self-Care">Self-Care</option>
+                                <option value="Family/Spouse/Kid(s)">
+                                    Family/Spouse/Kid(s)
                                 </option>
-                                <option value="Student Fees" class="selection">
+                                <option value="Pet">Pet</option>
+                                <option value="Food and Drink">
+                                    Food and Drink
+                                </option>
+                                <option value="Clothing">Clothing</option>
+                                <option value="Travel">Travel</option>
+                                <option value="Student Fees">
                                     Student Fees
                                 </option>
-                                <option value="Occassion" class="selection">
-                                    Occassion
-                                </option>
-                                <option value="Hobbies" class="selection">
-                                    Hobbies
-                                </option>
-                                <option
-                                    value="Social Outings"
-                                    class="selection"
-                                >
+                                <option value="Occassion">Occassion</option>
+                                <option value="Hobbies">Hobbies</option>
+                                <option value="Social Outings">
                                     Social Outings
                                 </option>
-                                <option value="Medical" class="selection">
-                                    Medical
-                                </option>
-                                <option
-                                    value="Charity/Donations"
-                                    class="selection"
-                                >
+                                <option value="Medical">Medical</option>
+                                <option value="Charity/Donations">
                                     Charity/Donations
                                 </option>
-                                <option
-                                    value="Misc/Non-essentials"
-                                    class="selection"
-                                >
+                                <option value="Misc/Non-essentials">
                                     Misc/Non-essentials
                                 </option>
                             </select>
@@ -834,12 +709,12 @@
 
                         <!-- Expenses 2nd input - Expense product -->
                         <div class="input_field">
-                            <label for="expense_product">Product:</label>
+                            <label for="expense_product">Product</label>
                             <input
                                 type="text"
                                 id="expense_product"
                                 name="expense_product"
-                                placeholder="Item purchased"
+                                placeholder="Groceries"
                                 maxlength="10"
                                 required
                             />
@@ -847,7 +722,7 @@
 
                         <!-- Expenses 3rd input - expense cost -->
                         <div class="input_field">
-                            <label for="expense_cost">Cost:</label>
+                            <label for="expense_cost">Cost</label>
                             <input
                                 type="number"
                                 id="expense_cost"
@@ -855,12 +730,13 @@
                                 oninput="limitInputLength(this, 6)"
                                 min="0"
                                 required
+                                placeholder="150"
                             />
                         </div>
 
                         <!-- Expenses 4th input - Expense Transaction Date -->
                         <div class="input_field">
-                            <label for="expense_date">Date of Purchase:</label>
+                            <label for="expense_date">Date of Purchase</label>
                             <input
                                 class="choose"
                                 type="date"
@@ -887,7 +763,7 @@
             <div class="wrapper">
                 <div class="close_button">
                     <i
-                        class="close fa-solid fa-x"
+                        class="close fa-solid fa-xmark"
                         close_popup="#goals_form_popup"
                     ></i>
                 </div>
@@ -901,11 +777,11 @@
                     <fieldset>
                         <!-- Goals 1st input - Name of goal -->
                         <div class="input_field">
-                            <label for="goal_name">Title:</label>
+                            <label for="goal_name">Title</label>
                             <input
                                 type="text"
                                 id="goal_name"
-                                placeholder="Item, event, etc."
+                                placeholder="Vacation"
                                 name="goal_name"
                                 maxlength="10"
                                 required
@@ -914,7 +790,7 @@
 
                         <!-- Goals 2nd input - goal target date -->
                         <div class="input_field">
-                            <label for="goal_date">Target Date:</label>
+                            <label for="goal_date">Target Date</label>
                             <input
                                 type="date"
                                 id="goal_date"
@@ -925,7 +801,7 @@
 
                         <!-- Goals 3rd input - Savings target -->
                         <div class="input_field">
-                            <label for="goal_target">Target Amount:</label>
+                            <label for="goal_target">Target Amount</label>
                             <input
                                 type="number"
                                 id="goal_target"
@@ -933,13 +809,14 @@
                                 oninput="limitInputLength(this, 6)"
                                 min="0"
                                 required
+                                placeholder="5000"
                             />
                         </div>
 
                         <!-- Goals 4th input - current amount -->
                         <div class="input_field">
                             <label for="goal_current"
-                                >Current Amount Saved:</label
+                                >Current Amount Saved</label
                             >
                             <input
                                 type="number"
@@ -948,6 +825,7 @@
                                 oninput="limitInputLength(this, 6)"
                                 min="0"
                                 required
+                                placeholder="1500"
                             />
                         </div>
                         <button
